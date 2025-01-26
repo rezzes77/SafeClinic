@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация в SafeClinic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .logo img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+        .content {
+            text-align: left;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="LOGO (4).png" alt="SafeClinic Logo">
+        </div>
+        <h2>Добро пожаловать в SafeClinic, {{ username }}!</h2>
+        <div class="content">
+            <p>Ваш аккаунт был успешно зарегистрирован.</p>
+            <p><strong>Логин:</strong> {{ username }}</p>
+            <p><strong>Пароль:</strong> {{ password }}</p>
+            <p>Используйте эти учетные данные для входа в систему.</p>
+            <a href="http://127.0.0.1:8000/api/login/" class="btn">Войти в систему</a>
+        </div>
+        <div class="footer">
+            <p>Если у вас возникли вопросы, свяжитесь с нами по адресу {{ support_email }}</p>
+            <p>&copy; 2025 SafeClinic. Все права защищены.</p>
+        </div>
+    </div>
+</body>
+</html>
